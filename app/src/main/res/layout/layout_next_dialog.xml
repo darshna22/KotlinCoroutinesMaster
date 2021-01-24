@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="300dp"
+  android:layout_height="wrap_content"
+  android:layout_gravity="center"
+  android:orientation="vertical"
+ android:padding="@dimen/spacing_standard">
+
+  <TextView
+    android:id="@+id/tvTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="18sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="Dialog Title" />
+
+  <TextView
+    android:id="@+id/tvMessage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_tight"
+    android:isScrollContainer="true"
+    android:maxHeight="280dp"
+    android:scrollbars="vertical"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tvTitle"
+    tools:text="Lorem ipsum dolor sit amet conseqtur dilis adispicing elit aliquam nolor elit." />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tvMessage">
+
+    <Button
+      android:id="@+id/btnNegative"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/spacing_tight"
+      android:paddingStart="@dimen/spacing_tight"
+      android:paddingEnd="@dimen/spacing_tight"
+      android:visibility="gone"
+      app:layout_constrainedWidth="true"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/btnPositive"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintWidth_percent="0.5"
+      tools:text="Cancel"
+      tools:visibility="visible" />
+
+    <Button
+      android:id="@+id/btnPositive"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:paddingStart="@dimen/spacing_tight"
+      android:paddingEnd="@dimen/spacing_tight"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/btnNegative"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintWidth_percent="0.5"
+      tools:text="Confirm"
+      tools:visibility="visible" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_standard">16dp</dimen>
+    <dimen name="spacing_tight">2dp</dimen>
+    <dimen name="rounded_corner_2">2dp</dimen>
+</resources>
